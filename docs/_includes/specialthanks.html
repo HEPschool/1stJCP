@@ -1,0 +1,22 @@
+{%- assign data = site.data.specialthanks -%}
+{%- if data and data.size > 0 -%}
+<section class="section" aria-labelledby="{{ include.id | default: 'specialthanks-home' }}">
+  <h2 id="{{ include.id | default: 'specialthanks-home' }}">{{ include.title | default: 'Special Thanks' }}</h2>
+  <ul class="specialthanks">
+    {%- assign people = data -%}
+    {%- if include.order_by -%}
+      {%- assign people = data | sort: include.order_by -%}
+    {%- endif -%}
+    {%- for p in people -%}
+      <li class="specialthanks-item">
+        {%- if p.url -%}
+          <a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a>
+        {%- else -%}
+          {{ p.name }}
+        {%- endif -%}
+        {%- if p.affiliation -%} {{ include.sep | default: ' - ' }} {{ p.affiliation }}{%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</section>
+{%- endif -%}
