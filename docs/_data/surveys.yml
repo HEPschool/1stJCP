@@ -1,10 +1,12 @@
 - name: "Registration"
-  topic: "Lecture: Dark Matter(25.11.08)"
+  topic: "Introduction to Dark Matter"
+  url: "https://docs.google.com/forms/d/e/1FAIpQLScQX8VimJ7CDm6ihze5IhxddZXNXIVUGmzmbe0uEj2Hn7Vvzg/viewform?usp=header"
+  enabled: true
+- name: "Presurvey"
+  topic: ""
   url: ""
   enabled: false
-- name: "Presurvey"
-  url: "Lecture: Axion(TBA)"
-  enabled: false
 - name: "Call for Lectures"
+  topic: ""
   url: ""
   enabled: false
