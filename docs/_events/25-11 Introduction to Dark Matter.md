@@ -3,9 +3,9 @@ layout: event
 title: "Introduction to Dark Matter"
 date: 2025-11-08 13:00 +0900
 location: "Room 115, College of Natural Sciences Building 4 (W11-2), Chungnam National University"
-speaker: "Daeyeong Jeong, Haebarg Kang"
+speaker: "Haebarg Kang and Daeyeong Jeong"
 address: "Room 115, College of Natural Sciences Building 4 (W11-2), Chungnam National University, 99 Daehak-ro, Yuseong-gu, Daejeon 34134, Korea"
-note: ""
+note: "Lecture"
 overview: >
   Introduction to Dark Matter
 timetable:
@@ -17,7 +17,7 @@ timetable:
     title: "Break"
     speaker: ""
   - time: "15:00"
-    title: "Session 2: Indirect Dectection"
+    title: "Session 2: Indirect Detection"
     speaker: "Haebarg Kang"
     material_id: ""
   - time: "16:30"
@@ -38,8 +38,8 @@ hero:
   lines:
     - text: "Introduction to Dark Matter"
       style: title
-    - text: "Daeyeong Jeong, Haebarg Kang"
+    - text: "Haebarg Kang and Daeyeong Jeong"
       style: subtitle
-    - text: "2025.11.08 (sat.)"
+    - text: "2025.11.08 (Sat)"
       style: text
 ---
