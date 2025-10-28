@@ -36,7 +36,7 @@ overview: > # 세부 페이지에서 표시되는 Overview. Lecture/Special Talk
   Brief overview for Lecture/Special talk: Your_TITLE 
 timetable: # timetable은 아래와 같은 형태로 기술됩니다.
   - time: "09:00"
-    title: "Openning Remarks"
+    title: "Opening Remarks"
     speaker: "Chair_1"
   - time: "09:30"
     title: "Lecture 1: Introduction"

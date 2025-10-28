@@ -2,10 +2,10 @@
 layout: event
 title: "Axion"
 date: 2025-12-01 00:00 +0900
-location: "Room 115, College of Natural Sciences Building 4 (W11-2), Chungnam National University"
+location: "Chungnam National University, Daejeon, Korea"
 speaker: "Chang Hyeon Lee"
 address: "Room 115, College of Natural Sciences Building 4 (W11-2), Chungnam National University, 99 Daehak-ro, Yuseong-gu, Daejeon 34134, Korea"
-note: "Lecture, TBA"
+note: "TBA"
 overview: >
   Axion
 timetable:

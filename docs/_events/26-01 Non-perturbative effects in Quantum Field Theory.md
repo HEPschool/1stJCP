@@ -5,7 +5,7 @@ date: 2026-01-01 00:00 +0900
 location: "TBA"
 speaker: "Gyuri Lee"
 address: "TBA"
-note: "Lecture, TBA"
+note: "TBA"
 overview: >
   none
 timetable:
