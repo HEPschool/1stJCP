@@ -61,10 +61,12 @@ Home 화면에 표시되는 Sponsors는 docs/_data/sponsors.Ymal 파일을 수�
 - name: "sponsor name"
   logo: "/assets/img/sponsors/sponsor_logo.png"
 ```
+Sponsors를 등록하는 경우, docs/index.md 파일 내에 원하는 위치에 {% include sponsors.html %} 를 추가하시기 바랍니다. <br/>
 logo: "" 항목에 로고 이미지가 등록되어 있다면, 해당 로고 이미지만 표시됩니다. <br/>
 로고 이미지가 등록되어 있지 않다면, name: "" 항목의 이름이 표시됩니다. <br/>
 표시되는 순서는 로고 이미지가 등록된 스폰서 -> 로고 이미지가 등록되지 않은 스폰서이며, 로고 이미지는 한 줄로 나열하고, 스폰서 이름은 한 줄에 하나씩 표시됩니다. <br/>
-로고 이미지 및 스폰서 이름 안에서의 순서는 docs/_data/sponsors.Ymal 파일에 입력된 순서를 따릅니다. <br/><br/><br/>
+로고 이미지 및 스폰서 이름 안에서의 순서는 docs/_data/sponsors.Ymal 파일에 입력된 순서를 따릅니다. <br/>
+표시 방식의 세부 설정은 docs/_includes/sponsors.html 파일을 수정하여 조정할 수 있습니다. <br/><br/><br/>
 
 ## 홈페이지 기초 설정·관리 <br/>
 홈페이지의 기초 설정들은 docs/_config.Ymal 파일에 입력되어 있습니다. <br/>
@@ -121,9 +123,15 @@ docs/_includes/footer.html 파일을 수정하여 표시되는 문구를 설정�
 ## 개별 페이지 설정·관리 (기초) <br/>
 기본 설정된 페이지는 Home, Upcoming Event, Schedule, Lecturers, Lecture Materials 총 5가지 입니다. <br/>
 Upcoming Event를 제외한 각 페이지들은 docs/ 폴더의 각 .md 파일에서 설정·관리할 수 있습니다.(Home 페이지는 index.md 파일에서 설정·관리) <br/>
-Upcoming Event의 경우, 등록된 Lecture/Special Talk 일정 중 가장 가까운 일정(당일을 포함)의 세부 페이지를 자동으로 표시합니다. <br/>
+Upcoming Event의 경우, 등록된 일정 중 가장 가까운 일정(당일을 포함)의 세부 페이지를 자동으로 표시합니다. <br/>
 기초적인 페이지 설정·관리는 markdown 문법을 따라 파일을 작성·수정하여 할 수 있습니다. <br/>
 필요 시 동일한 디렉토리에 신규 .md 파일을 생성하고, docs/_config.Ymal 파일을 수정하여 신규 페이지를 등록할 수 있습니다. <br/><br/><br/>
+
+## Upcoming banner 등록·관리 <br/>
+Upcoming Event 페이지 표시와 동일한 매커니즘으로, Home 페이지에 자동으로 Upcoming banner가 생성됩니다. <br/>
+이 banner는 docs/_events 폴더에 존재하는 해당 event의 .md 파일에 hero image가 설정되어 있어야 정상적으로 표시되며, 동일 이미지를 사용하여 자동으로 banner를 만듭니다. <br/>
+Banner는 기본적으로 최상단에 "Upcoming Event" 문구를 표시하고, event의 .md 파일에서 title, location, date, speakers를 순서대로 읽어들여 표시합니다. <br/>
+Banner에 표시되는 항목들의 세부 설정은 docs/_includes/upcoming.html을 수정하여 변경할 수 있습니다. <br/><br/><br/>
 
 ## 페이지 레이아웃 설정·관리 <br/>
 각 페이지들의 기본 레이아웃은 docs/_layouts 폴더의 defalut.html과 event.html 파일에 설정되어 있습니다. <br/>

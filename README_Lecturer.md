@@ -20,8 +20,8 @@ Lecturer 정보는 docs/_data/lecturers.Ymal 파일을 수정하여 등록·관�
 photo 등록을 위해서는 docs/assets/img/lecturers 폴더에 사진을 업로드하고, photo: "" 값을 올바르게 수정해주시기 바랍니다. <br/>
 Lecturers 페이지에 게시되는 순서는, docs/_data/lecturers.Ymal 파일 내의 순서와 동일하게 정렬되어 게시됩니다. (Lecturer/Special talk의 순서에 맞춰서 정렬하는 것을 권장합니다.) <br/><br/><br/>
 
-## Lecture/Special Talk Event 등록·관리 <br/>
-Lecture/Special talk event는 docs/_events 폴더에 .md 파일을 생성·수정하여 등록·관리할 수 있습니다. <br/>
+## Event 등록·관리 <br/>
+Event는 docs/_events 폴더에 .md 파일을 생성·수정하여 등록·관리할 수 있습니다. <br/>
 .md 파일의 이름은 홈페이지에 표시되는 내용과 무관합니다. (관리의 용이성을 위해, 파일 이름은 통일된 규칙으로 작성하는 것을 권장합니다.) </br>
 ```yml
 ---
@@ -79,7 +79,9 @@ hero: # Optional: 세부 페이지 상단에 표시되는 이미지와 문구를
 hero 설정을 위해서는 docs/assets/img/heros 폴더에 사진을 업로드하고, image: "" 값을 올바르게 수정해주시기 바랍니다. <br/>
 docs/_events 폴더에 .md 파일이 생성되면, Schedule 페이지에 일정 등록 및 세부 페이지가 생성됩니다. <br/>
 Schedule 페이지에는 data 값을 기준으로 정렬된 순서로 일정이 표시되며, 각 일정을 클릭하여 세부 페이지에 접근할 수 있습니다. <br/>
-.md 파일에 입력된 data 값을 기준으로, 페이지 방문 시점에서 같거나 미래의 일정 중, 가장 가까운 일정이 Upcoming Event 페이지에 자동으로 표시됩니다. <br/><br/><br/>
+.md 파일에 입력된 data 값을 기준으로, 페이지 방문 시점에서 같거나 미래의 일정 중, 가장 가까운 일정이 Upcoming Event 페이지에 자동으로 표시됩니다. <br/>
+Upcoming Event 페이지에 표시되는 일정의 banner가 자동으로 Home 페이지에 생성되어 표시됩니다. <br/>
+Banner는 hero 항목에 설정된 image와 동일한 image를 사용하며, image가 설정되어 있어야 정상적으로 표시됩니다. <br/><br/><br/>
 
 ## Lecturer material 등록·관리 <br/>
 Lecture material은 /assets/materials 폴더에 pdf 파일을 업로드하고, docs/_data/materials.Ymal 파일을 수정하여 등록·관리할 수 있습니다. <br/>
