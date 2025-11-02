@@ -17,7 +17,7 @@ map_embed: >
   <iframe src="https://www.google.com/maps/embed?pb=YOUR-MAPS-EMBED"
           loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 hero:
-  image: "/assets/img/Feynman-diagram.webp"  # Optional
+  image: "/assets/img/heros/Feynman-diagram.webp"  # Optional
   lines:
     - text: "Phase Transition"
       style: title

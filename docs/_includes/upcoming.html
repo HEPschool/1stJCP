@@ -1,0 +1,97 @@
+<section id="upcoming-hero" class="hero" hidden>
+  <a id="upcoming-hero-link" href="#" style="display:block;text-decoration:none;color:inherit;">
+    <div class="hero-media">
+      <img id="upcoming-hero-img" src="" alt="" />
+    </div>
+    <div class="hero-overlay">
+      <div class="hero-lines">
+        <div class="hero-line subtitle">Upcoming Event</div>
+        <div class="hero-line title" id="upcoming-hero-title"></div>
+        <div class="hero-line subtitle" id="upcoming-hero-location"></div>
+        <div class="hero-line note" id="upcoming-hero-date"></div>
+        <div class="hero-line text" id="upcoming-hero-speaker"></div>
+      </div>
+    </div>
+  </a>
+</section>
+
+<style>
+#upcoming-hero .hero-media img{height:180px;}
+@media (min-width:700px){#upcoming-hero .hero-media img{height:240px;}}
+@media (min-width:1000px){#upcoming-hero .hero-media img{height:320px;}}
+
+#upcoming-hero .hero-line.title{font-size:clamp(1.6rem,3.0vw,3.2rem);}
+#upcoming-hero .hero-line.subtitle{font-size:clamp(0.8rem,2.0vw,1.6rem);}
+#upcoming-hero .hero-line.text{font-size:clamp(0.6rem,1.2vw,1.2rem);}
+#upcoming-hero .hero-line.note{font-size:clamp(0.6rem,1.6vw,1.2rem);}
+
+#upcoming-hero .hero-media{position:relative;overflow:hidden}
+#upcoming-hero .hero-media::before,
+#upcoming-hero .hero-media::after{
+  content:"";position:absolute;top:0;bottom:0;width:12%;pointer-events:none;z-index:1
+}
+#upcoming-hero .hero-media::before{
+  left:0;background:linear-gradient(90deg,var(--bg) 0%,rgba(0,0,0,0) 100%)
+}
+#upcoming-hero .hero-media::after{
+  right:0;background:linear-gradient(270deg,var(--bg) 0%,rgba(0,0,0,0) 100%)
+}
+</style>
+
+<script id="events-data-upcoming" type="application/json">[
+{%- assign events = site.events | sort: "date" -%}
+{%- for ev in events -%}
+{"url":{{ ev.url | replace:"index.html","" | append:"/" | replace:"//","/" | relative_url | jsonify }},"iso":{{ ev.date | date:"%Y-%m-%dT%H:%M:%S%:z" | jsonify }},"title":{{ ev.title | jsonify }},"speaker":{{ ev.speaker | jsonify }},"location":{{ ev.location | jsonify }},"hero":{"image":{{ ev.hero.image | default:"" | relative_url | jsonify }}}}{% unless forloop.last %},{% endunless %}
+{%- endfor -%}
+]</script>
+
+<script>
+(function(){
+  function ymdInKST(d){return new Date(d.getTime()+9*60*60*1000).toISOString().slice(0,10)}
+  function ymdFromISOinKST(iso){return ymdInKST(new Date(iso))}
+  function fmtKST(iso) {
+    const d = new Date(iso);
+    const kst = new Date(d.getTime() + 9 * 60 * 60 * 1000);
+    const yyyy = kst.getUTCFullYear();
+    const mm = String(kst.getUTCMonth() + 1).padStart(2, "0");
+    const dd = String(kst.getUTCDate()).padStart(2, "0");
+    const hh = String(kst.getUTCHours()).padStart(2, "0");
+    const mi = String(kst.getUTCMinutes()).padStart(2, "0");
+    const weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][kst.getUTCDay()];
+    return `${yyyy}.${mm}.${dd} (${weekday}) ${hh}:${mi}`;
+  }
+
+  var dataEl=document.getElementById('events-data-upcoming');
+  if(!dataEl) return;
+
+  var events=[];try{events=JSON.parse(dataEl.textContent||'[]')}catch(_){events=[]}
+  var today=ymdInKST(new Date());
+  var next=events.map(ev=>Object.assign(ev,{ymd:ymdFromISOinKST(ev.iso)}))
+                 .filter(ev=>ev.ymd>=today)
+                 .sort((a,b)=>a.ymd.localeCompare(b.ymd))[0];
+  if(!next) return;
+
+  var heroImage=(next.hero&&typeof next.hero.image==='string')?next.hero.image.trim():'';
+  if(!heroImage) return;
+
+  var section=document.getElementById('upcoming-hero');
+  var link=document.getElementById('upcoming-hero-link');
+  var img=document.getElementById('upcoming-hero-img');
+  var t=document.getElementById('upcoming-hero-title');
+  var d=document.getElementById('upcoming-hero-date');
+  var l=document.getElementById('upcoming-hero-location');
+  var s=document.getElementById('upcoming-hero-speaker');
+  if(!section||!link||!img||!t||!d||!l||!s) return;
+
+  link.href = next.url || '#';
+  t.textContent=next.title||'';
+  d.textContent=fmtKST(next.iso);
+  l.textContent=next.location||'';
+  s.textContent=next.speaker||'';
+
+  img.src=heroImage;
+  img.alt=next.title || 'Event hero image';
+
+  section.hidden=false;
+})();
+</script>

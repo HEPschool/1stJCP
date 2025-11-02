@@ -14,7 +14,7 @@
         {%- else -%}
           {{ p.name }}
         {%- endif -%}
-        {%- if p.affiliation -%} {{ include.sep | default: ' - ' }} {{ p.affiliation }}{%- endif -%}
+        {%- if p.affiliation and p.affiliation != "" -%} {{ include.sep | default: ' - ' }} {{ p.affiliation }}{%- endif -%}
       </li>
     {%- endfor -%}
   </ul>

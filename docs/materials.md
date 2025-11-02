@@ -3,7 +3,7 @@ layout: default
 permalink: /materials/
 title: Lecture Materials
 hero:
-  image: "/assets/img/Feynman-diagram.webp"  # Optional
+  image: "/assets/img/heros/Feynman-diagram.webp"  # Optional
   title: "Lecture Materials"
 ---
 # Lecture Materials

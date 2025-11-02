@@ -3,7 +3,7 @@ layout: default
 permalink: /lecturers/
 title: Lecturers
 hero:
-  image: "/assets/img/Feynman-diagram.webp"  # Optional
+  image: "/assets/img/heros/Feynman-diagram.webp"  # Optional
   title: "Lecturers"
 ---
 # Lecturers

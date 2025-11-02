@@ -9,7 +9,7 @@ layout: default
       {% if page.speaker %}{{ page.speaker }}{% endif %}
     </div>
     <div class="muted" style="margin-bottom:1rem">
-      {{ page.date | date: "%Y-%m-%d (%a) %H:%M" }}{% if page.location %} · {{ page.location }}{% endif %}
+      {{ page.date | date: "%Y.%m.%d (%a) %H:%M" }}{% if page.location %} · {{ page.location }}{% endif %}
     </div>
   </header>
 
@@ -76,6 +76,20 @@ layout: default
       {% if page.map_embed %}
         <div class="embed">{{ page.map_embed }}</div>
       {% endif %}
+    </section>
+  {% endif %}
+
+  {% if page.group_photos and page.group_photos.size > 0 %}
+    <section class="section">
+      <h2>Group Photo</h2>
+      {% for photo in page.group_photos %}
+        {% if photo and photo != "" %}
+          <img src="{{ photo | relative_url }}"
+               alt="Group Photo {{ forloop.index }}"
+               style="display:block;width:100%;height:auto;margin-bottom:1rem;
+                      border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.15);" />
+        {% endif %}
+      {% endfor %}
     </section>
   {% endif %}
 </article>

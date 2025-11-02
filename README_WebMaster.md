@@ -52,7 +52,19 @@ Home 화면에 표시되는 Organizers는 docs/_data/organizers.Ymal 파일을 �
 - name: "organizer name"
   affiliation: "organizer affiliation"
 ```
-표시되는 순서는 docs/_data/organizers.Ymal 파일에 입력된 순서를 따릅니다. <br/><br/><br/>
+표시되는 순서는 docs/_data/organizers.Ymal 파일에 입력된 순서를 따릅니다. <br/>
+동일한 방식으로, Special Thanks 등록·관리를 수행할 수 있습니다. <br/><br/><br/>
+
+## Sponsors 등록·관리 <br/>
+Home 화면에 표시되는 Sponsors는 docs/_data/sponsors.Ymal 파일을 수정하여 등록·관리할 수 있습니다.
+```yml
+- name: "sponsor name"
+  logo: "/assets/img/sponsors/sponsor_logo.png"
+```
+logo: "" 항목에 로고 이미지가 등록되어 있다면, 해당 로고 이미지만 표시됩니다. <br/>
+로고 이미지가 등록되어 있지 않다면, name: "" 항목의 이름이 표시됩니다. <br/>
+표시되는 순서는 로고 이미지가 등록된 스폰서 -> 로고 이미지가 등록되지 않은 스폰서이며, 로고 이미지는 한 줄로 나열하고, 스폰서 이름은 한 줄에 하나씩 표시됩니다. <br/>
+로고 이미지 및 스폰서 이름 안에서의 순서는 docs/_data/sponsors.Ymal 파일에 입력된 순서를 따릅니다. <br/><br/><br/>
 
 ## 홈페이지 기초 설정·관리 <br/>
 홈페이지의 기초 설정들은 docs/_config.Ymal 파일에 입력되어 있습니다. <br/>
@@ -84,11 +96,11 @@ collections:
   events:
     output: true
     permalink: /events/:slug/
-nav_next_label: Next Lecture
+nav_next_label: Upcoming Event
 ```
 신규 페이지 추가 시, nav: 하위 항목에 해당 페이지의 name 및 url을 추가합니다. (개별 페이지 설정·관리 (기초)를 참고하세요.) <br/>
 홈페이지 상단 네비게이션 바에 표시되는 각 페이지 순서는, nav에 설정된 순서를 따릅니다. <br/>
-Next Lecutre는 항상 두 번째 위치에 표시되며, 필요시 docs/_includes/header.html을 수정하여 조정할 수 있습니다. <br/><br/><br/>
+Upcoming Event는 항상 두 번째 위치에 표시되며, 필요시 docs/_includes/header.html을 수정하여 조정할 수 있습니다. <br/><br/><br/>
 
 ## favicon 등록·관리 <br/>
 favicon은 페이지 방문 시, 웹 브라우저의 탭 항목에 표시되는 작은 아이콘입니다. <br/>
@@ -107,9 +119,9 @@ footer는 각 페이지 하단에 © something · something again 형태로 표�
 docs/_includes/footer.html 파일을 수정하여 표시되는 문구를 설정·관리할 수 있습니다. <br/><br/><br/>
 
 ## 개별 페이지 설정·관리 (기초) <br/>
-기본 설정된 페이지는 Home, Next Lecture, Schedule, Lecturers, Lecture Materials 총 5가지 입니다. <br/>
-Next Lecture를 제외한 각 페이지들은 docs/ 폴더의 각 .md 파일에서 설정·관리할 수 있습니다.(Home 페이지는 index.md 파일에서 설정·관리) <br/>
-Next Lecture의 경우, 등록된 Lecture/Special Talk 일정 중 가장 가까운 일정(당일을 포함)의 세부 페이지를 자동으로 표시합니다. <br/>
+기본 설정된 페이지는 Home, Upcoming Event, Schedule, Lecturers, Lecture Materials 총 5가지 입니다. <br/>
+Upcoming Event를 제외한 각 페이지들은 docs/ 폴더의 각 .md 파일에서 설정·관리할 수 있습니다.(Home 페이지는 index.md 파일에서 설정·관리) <br/>
+Upcoming Event의 경우, 등록된 Lecture/Special Talk 일정 중 가장 가까운 일정(당일을 포함)의 세부 페이지를 자동으로 표시합니다. <br/>
 기초적인 페이지 설정·관리는 markdown 문법을 따라 파일을 작성·수정하여 할 수 있습니다. <br/>
 필요 시 동일한 디렉토리에 신규 .md 파일을 생성하고, docs/_config.Ymal 파일을 수정하여 신규 페이지를 등록할 수 있습니다. <br/><br/><br/>
 
