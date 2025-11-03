@@ -1,12 +1,12 @@
 ---
 layout: default
 permalink: /materials/
-title: Lecture Materials
+title: Materials
 hero:
   image: "/assets/img/heros/Feynman-diagram.webp"  # Optional
-  title: "Lecture Materials"
+  title: "Materials"
 ---
-# Lecture Materials
+# Materials
 
 If you require access to the encrypted materials, please contact the author.
 

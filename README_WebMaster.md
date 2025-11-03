@@ -8,10 +8,9 @@ README_WebMaster에서는 홈페이지 전반의 관리, Survey 등록·관리, 
 등록·관리에 앞서, 관리자에게 repository 편집 권한을 요청하시기 바랍니다. <br/><br/><br/>
 
 ## Survey 등록·관리 <br/>
-Home 화면에 노출되는 Survey의 기본 항목들은 Registration, Presurvey, Call for Lecture 총 3가지 입니다. <br/>
+Home 화면에 노출되는 Survey의 기본 항목들은 Registration, Presurvey 총 2가지 입니다. <br/>
 Registration: 강연 참석 여부 설문 조사 <br>
 Presurvey: 강연 진행을 위한 사전 설문 조사 (Speaker의 강연 진행을 위한 설문 조사로, Speaker가 항목을 준비하고, 관리자가 설정하여 게시합니다.) <br/>
-Call for Lecutres: Lecture/Special talk 진행 신청을 위한 조사 <br/>
 각 Survey들은 정보는 docs/_data/surveys.Ymal 파일을 수정하여 등록·관리할 수 있습니다. <br/>
 ```yml
 - name: "Registration" # 설문 조사 이름 
@@ -121,9 +120,9 @@ footer는 각 페이지 하단에 © something · something again 형태로 표�
 docs/_includes/footer.html 파일을 수정하여 표시되는 문구를 설정·관리할 수 있습니다. <br/><br/><br/>
 
 ## 개별 페이지 설정·관리 (기초) <br/>
-기본 설정된 페이지는 Home, Upcoming Event, Schedule, Lecturers, Lecture Materials 총 5가지 입니다. <br/>
+기본 설정된 페이지는 Home, Upcoming Event, Schedule, Lecturers, Materials 총 5가지 입니다. <br/>
 Upcoming Event를 제외한 각 페이지들은 docs/ 폴더의 각 .md 파일에서 설정·관리할 수 있습니다.(Home 페이지는 index.md 파일에서 설정·관리) <br/>
-Upcoming Event의 경우, 등록된 일정 중 가장 가까운 일정(당일을 포함)의 세부 페이지를 자동으로 표시합니다. <br/>
+Upcoming Event의 경우, 등록된 일정 중 가장 가까운 일정(당일을 포함)의 상세 페이지를 자동으로 표시합니다. <br/>
 기초적인 페이지 설정·관리는 markdown 문법을 따라 파일을 작성·수정하여 할 수 있습니다. <br/>
 필요 시 동일한 디렉토리에 신규 .md 파일을 생성하고, docs/_config.Ymal 파일을 수정하여 신규 페이지를 등록할 수 있습니다. <br/><br/><br/>
 
@@ -135,5 +134,5 @@ Banner에 표시되는 항목들의 세부 설정은 docs/_includes/upcoming.htm
 
 ## 페이지 레이아웃 설정·관리 <br/>
 각 페이지들의 기본 레이아웃은 docs/_layouts 폴더의 defalut.html과 event.html 파일에 설정되어 있습니다. <br/>
-모든 페이지들은 defalut.html의 레이아웃을 따르며, 각 Lecture/Special talk의 세부 페이지는 event.html을 추가적으로 따릅니다. <br/>
+모든 페이지들은 defalut.html의 레이아웃을 따르며, 각 Event의 상세 페이지는 event.html을 추가적으로 따릅니다. <br/>
 필요 시 해당 파일들을 적절히 수정하여 사용하거나, 신규 레이아웃 파일을 추가하여 사용할 수 있습니다. <br/><br/><br/>
