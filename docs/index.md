@@ -13,6 +13,8 @@ hero:
       style: subtitle
     - text: "Jeonbuk, Chungnam and Pusan National University"
       style: note
+    - text: "Hosted by the Institute for Sciences of the Universe"
+      style: note
 ---
 # {{ site.title }}
 
@@ -33,5 +35,7 @@ JCP HEP School is a student-led monthly workshop featuring graduate-level, field
 {% include poster.html %}
 
 {% include organizers.html %}
+
+{% include sponsors.html title="Host" %}
 
 {% include specialthanks.html %}

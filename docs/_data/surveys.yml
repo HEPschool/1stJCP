@@ -1,7 +1,7 @@
 - name: "Registration"
-  topic: "Introduction to Dark Matter"
-  url: "https://docs.google.com/forms/d/e/1FAIpQLScQX8VimJ7CDm6ihze5IhxddZXNXIVUGmzmbe0uEj2Hn7Vvzg/viewform?usp=header"
-  enabled: true
+  topic: ""
+  url: ""
+  enabled: false
 - name: "Presurvey"
   topic: ""
   url: ""
