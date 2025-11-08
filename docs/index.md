@@ -7,15 +7,16 @@ hero:
   lines:
     - text: "2025. fall ~ 2026. winter"
       style: overline
+    - text: "COSMIC School:"
+      style: subtitle
     - text: "1st JCP HEP School"
       style: title
-    - text: "by students, for students"
-      style: subtitle
     - text: "Jeonbuk, Chungnam and Pusan National University"
       style: note
     - text: "Hosted by the Institute for Sciences of the Universe"
       style: note
 ---
+## COSMIC School:
 # {{ site.title }}
 
 ## Monthly Graduate-Student Workshop on High-Energy Phenomenology

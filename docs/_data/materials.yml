@@ -1,5 +1,15 @@
-- title: "title_test"
-  speaker: "speaker_test"
-  date: 2025-09-00
-  file: "/assets/materials/test.pdf"
-  id: "id_test"
+- title: "Dark Matter Introduction and Indirect Detection Lecture Note"
+  speaker: "Haebarg Kang"
+  date: 2025-11-08
+  file: "/assets/materials/Dark Matter Introduction and Indirect Detection Lecture Note.pdf"
+  id: "DM_IDNote"
+- title: "Dark Matter Introduction and Indirect Detection PPT"
+  speaker: "Haebarg Kang"
+  date: 2025-11-08
+  file: "/assets/materials/Dark Matter Introduction and Indirect Detection PPT.pdf"
+  id: "DM_IDPPT"
+- title: "Dark Matter Direct Detection Lecture Note"
+  speaker: "Daeyeong Jeong"
+  date: 2025-11-08
+  file: "/assets/materials/Dark Matter Direct Detection Lecture Note.pdf"
+  id: "DM_DDNote"
