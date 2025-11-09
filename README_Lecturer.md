@@ -63,9 +63,9 @@ timetable: # timetable은 아래와 같은 형태로 기술됩니다.
 map_embed: > # 상세 페이지에 표시되는 지도. src-"" 부분에 구글 지도에서 원하는 위치를 찍고, 공유-지도 퍼가기-src="" 부분의 링크를 복사하여 붙여넣습니다.
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1606.3149986890949!2d127.34389919160189!3d36.36974017722345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35654bee63320a8f%3A0x70e438ccb2656aa8!2z7Lap64Ko64yA7ZWZ6rWQIOuMgOuNley6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1758033402650!5m2!1sko!2skr"
           loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-group_photos: # group photo 사진 위치를 아래와 같이 나열합니다. 만약 group photo가 없다면, 아래의 각 항목을 완전하게 삭제하여 "Group Photo" section이 생성되지 않도록 합니다.
-  - "assets/img/group_photos/photo1.jpg"
-  - "assets/img/group_photos/photo2.jpg"
+photos: # 사진 위치를 아래와 같이 나열합니다. 만약 photo가 없다면, 아래의 각 항목을 완전하게 삭제하여 "Photo" section이 생성되지 않도록 합니다.
+  - "assets/img/photos/photo1.jpg"
+  - "assets/img/photos/photo2.jpg"
 hero: # Optional: 상세 페이지 상단에 표시되는 이미지와 문구를 지정합니다.
   image: "/assets/img/heros/your_hero.png" # 이미지가 등록되어 있지 않으면, 아래의 텍스트 설정과 무관하게 페이지 상단에 이미지·문구가 출력되지 않습니다.
   lines: # 각 문구는 입력 순서에 맞춰 상단->하단 순서로 표시됩니다.
