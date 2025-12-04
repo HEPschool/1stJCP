@@ -5,7 +5,7 @@ date: 2026-01-10 09:00 +0900
 location: "Chungnam National University, Daejeon, Korea"
 speaker: "Chang Hyeon Lee"
 address: "Room 115, College of Natural Sciences Building 4 (W11-2), Chungnam National University, 99 Daehak-ro, Yuseong-gu, Daejeon 34134, Korea"
-note: "TBA"
+note: "Lecture"
 overview: >
   The Strong CP Problem and QCD Axion
 timetable:
