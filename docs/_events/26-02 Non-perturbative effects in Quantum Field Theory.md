@@ -1,7 +1,7 @@
 ---
 layout: event
 title: "Non-perturbative effects in Quantum Field Theory"
-date: 2026-02-21 09:00 +0900
+date: 2026-02-28 09:00 +0900
 location: "TBA"
 speaker: "Gyuri Lee"
 address: "TBA"
@@ -23,6 +23,6 @@ hero:
       style: title
     - text: "Gyuri Lee"
       style: subtitle
-    - text: "2026.02.21 (Sat)"
+    - text: "2026.02.28 (Sat)"
       style: text
 ---
