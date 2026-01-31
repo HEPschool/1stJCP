@@ -31,8 +31,6 @@ JCP HEP School is a student-led monthly workshop featuring graduate-level, field
 
 {% include surveys.html %}
 
-**⚠️ Notice:** Registration and the presurvey are combined into a single form for this occasion. Please complete it **only if you plan to attend.**
-
 <br>
 
 {% include poster.html %}

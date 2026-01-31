@@ -1,8 +1,8 @@
 - name: "Registration"
-  topic: "The Strong CP Problem and QCD Axion"
-  url: "https://docs.google.com/forms/d/e/1FAIpQLSdOqGUvNSRRby5K2sdTij-U_wajBb49yPWvcb5TY4E6fHj_iQ/viewform?usp=sharing&ouid=100527788898630603569"
-  enabled: true
+  topic: ""
+  url: ""
+  enabled: false
 - name: "Presurvey"
-  topic: "The Strong CP Problem and QCD Axion"
-  url: "https://docs.google.com/forms/d/e/1FAIpQLSdOqGUvNSRRby5K2sdTij-U_wajBb49yPWvcb5TY4E6fHj_iQ/viewform?usp=sharing&ouid=100527788898630603569"
-  enabled: true
+  topic: ""
+  url: ""
+  enabled: false

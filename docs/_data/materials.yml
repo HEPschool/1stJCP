@@ -13,3 +13,8 @@
   date: 2025-11-08
   file: "/assets/materials/Dark Matter Direct Detection Lecture Note.pdf"
   id: "DM_DDNote"
+- title: "The Strong CP Problem"
+  speaker: "Chang Hyeon Lee"
+  date: 2025-11-08
+  file: "/assets/materials/The Strong CP Problem.pdf"
+  id: "StrongCP_Note"
