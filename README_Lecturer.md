@@ -14,11 +14,13 @@ Lecturer 정보는 docs/_data/lecturers.Ymal 파일을 수정하여 등록·관�
 - name: "Jhon Doe"
   affiliation: "your affiliation"
   email: "your_email@google.com"
+  date: 2025-08-22
   intro: "your intro" # Optional: 간단한 자기 소개를 입력해주세요.
   photo: "/assets/img/lecturers/your_img.png" # Optional: 해당 란을 비워두면 (""), 기본 이미지가 사용됩니다.
 ```
+date는 강의 날짜로 설정해주시기 바랍니다. <br/>
 photo 등록을 위해서는 docs/assets/img/lecturers 폴더에 사진을 업로드하고, photo: "" 값을 올바르게 수정해주시기 바랍니다. <br/>
-Lecturers 페이지에 게시되는 순서는, docs/_data/lecturers.Ymal 파일 내의 순서와 동일하게 정렬되어 게시됩니다. (Event의 순서에 맞춰서 정렬하는 것을 권장합니다.) <br/><br/><br/>
+Lecturers 페이지에 게시되는 순서는, 각 년도 안에서 date 순서로 정렬되어 표시됩니다. <br/><br/><br/>
 
 ## Event 등록·관리 <br/>
 Event는 docs/_events 폴더에 .md 파일을 생성·수정하여 등록·관리할 수 있습니다. <br/>
@@ -63,10 +65,17 @@ timetable: # timetable은 아래와 같은 형태로 기술됩니다.
 map_embed: > # 상세 페이지에 표시되는 지도. src-"" 부분에 구글 지도에서 원하는 위치를 찍고, 공유-지도 퍼가기-src="" 부분의 링크를 복사하여 붙여넣습니다.
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1606.3149986890949!2d127.34389919160189!3d36.36974017722345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35654bee63320a8f%3A0x70e438ccb2656aa8!2z7Lap64Ko64yA7ZWZ6rWQIOuMgOuNley6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1758033402650!5m2!1sko!2skr"
           loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+participants: # 참가자 명단을 생성합니다. 이름-소속의 표 형태로 표시되며, 소속 기준 정렬 후 이름 기준 정렬하여 순서대로 표시됩니다. 참가자 명단 표시를 원하지 않는다면, 아래의 각 항목을 완전하게 삭제하여 "Participants" section이 생성되지 않도록 합니다.
+  - name: Panthera Pardus
+    affiliation: Jeonbuk National Univerisity
+  - name: Equus Ferus Caballus
+    affiliation: Chungnam National Univerisity
+  - name: Larus Canus
+    affiliation: Pusan National Univerisity
 photos: # 사진 위치를 아래와 같이 나열합니다. 만약 photo가 없다면, 아래의 각 항목을 완전하게 삭제하여 "Photo" section이 생성되지 않도록 합니다.
   - "assets/img/photos/photo1.jpg"
   - "assets/img/photos/photo2.jpg"
-hero: # Optional: 상세 페이지 상단에 표시되는 이미지와 문구를 지정합니다.
+hero: # 상세 페이지 상단에 표시되는 이미지와 문구를 지정합니다.
   image: "/assets/img/heros/your_hero.png" # 이미지가 등록되어 있지 않으면, 아래의 텍스트 설정과 무관하게 페이지 상단에 이미지·문구가 출력되지 않습니다.
   lines: # 각 문구는 입력 순서에 맞춰 상단->하단 순서로 표시됩니다.
     - text: "YOUR TITLE"
@@ -78,6 +87,7 @@ hero: # Optional: 상세 페이지 상단에 표시되는 이미지와 문구를
 ---
 ```
 hero 설정을 위해서는 docs/assets/img/heros 폴더에 사진을 업로드하고, image: "" 값을 올바르게 수정해주시기 바랍니다. <br/>
+가급적 hero 항목을 완전히 설정해주시고, 적절한 image가 없는 경우 /assets/img/heros/event_default.jpg를 사용해주시기 바랍니다. <br/>
 docs/_events 폴더에 .md 파일이 생성되면, Schedule 페이지에 일정 등록 및 상세 페이지가 생성됩니다. <br/>
 Schedule 페이지에는 data 값을 기준으로 정렬된 순서로 일정이 표시되며, 각 일정을 클릭하여 상세 페이지에 접근할 수 있습니다. <br/>
 .md 파일에 입력된 data 값을 기준으로, 페이지 방문 시점에서 같거나 미래의 일정 중, 가장 가까운 일정이 Upcoming Event 페이지에 자동으로 표시됩니다. <br/>

@@ -1,5 +1,5 @@
-# 1st JCP HEP School
-Welcome to the 1st JCP HEP School Repository! <br/>
+# JCP HEP School
+Welcome to the JCP HEP School Repository! <br/>
 The JCP HEP School is a monthly workshop organized by graduate students in high-energy phenomenology in South Korea. We conduct lectures on the background knowledge, standard tools, and current status of our respective research fields. <br/><br/>
-You can visit the 1st JCP HEP School Homepage through the link below. <br/>
-### **[1st JCP HEP School Homepage](https://hepschool.github.io/1stJCP)**
+You can visit the JCP HEP School Homepage through the link below. <br/>
+### **[JCP HEP School Homepage](https://hepschool.github.io/JCP)**

@@ -1,13 +1,13 @@
-title: 1st JCP HEP School
-description: 1st JCP HEP School
+title: JCP HEP School
+description: JCP HEP School
 lang: en
-baseurl: /1stJCP
+baseurl: /JCP
 url: https://HEPschool.github.io
 markdown: kramdown
 timezone: Asia/Seoul
 plugins:
 #- jekyll-seo-tag
-#- jekyll-jekyll-sitemap
+#- jekyll-sitemap
 kramdown:
   input: GFM
   hard_wrap: false

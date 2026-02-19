@@ -3,19 +3,26 @@ layout: default
 permalink: /materials/
 title: Materials
 hero:
-  image: "/assets/img/heros/Feynman-diagram.webp"  # Optional
+  image: "/assets/img/heros/books.jpg"  # Optional
   title: "Materials"
 ---
 # Materials
 
 If you require access to the encrypted materials, please contact the author.
 
-<ul>
+<div class="year-filter">
+  <button id="materials-prev-toggle" class="btn small year-filter-btn" type="button">Select year</button>
+  <span id="materials-current-year" class="year-filter-current"></span>
+</div>
+<div id="materials-year-filter" class="year-scroll" hidden></div>
+<p id="materials-empty" class="year-filter-empty" hidden>No materials available for the selected year.</p>
+
+<ul id="materials-list">
   {% assign mats = site.data.materials | sort: "date" %}
   {% for m in mats %}
     {% assign href = m.file %}
-    <li>
-      <strong>{{ m.date }} · {{ m.title }}</strong> - {{ m.speaker }}
+    <li data-year="{{ m.date | date: '%Y' }}">
+      <strong>{{ m.date }} - {{ m.title }}</strong> - {{ m.speaker }}
       {% if href contains '://' %}
         [ <a href="{{href}}" target="_blank" rel="noopener">PDF</a> ]
       {% else %}
@@ -24,3 +31,63 @@ If you require access to the encrypted materials, please contact the author.
     </li>
   {% endfor %}
 </ul>
+
+<script>
+  (function () {
+    var currentYear = String(new Date().getFullYear());
+    var filterRoot = document.getElementById("materials-year-filter");
+    var toggleBtn = document.getElementById("materials-prev-toggle");
+    var currentYearText = document.getElementById("materials-current-year");
+    var list = document.getElementById("materials-list");
+    var emptyNote = document.getElementById("materials-empty");
+    if (!filterRoot || !list || !toggleBtn || !currentYearText) return;
+
+    var items = Array.prototype.slice.call(list.querySelectorAll("li[data-year]"));
+    var years = Array.from(new Set(items.map(function (item) {
+      return item.getAttribute("data-year");
+    }).filter(Boolean))).sort(function (a, b) {
+      return Number(b) - Number(a);
+    });
+    years = years.filter(function (year) {
+      return Number(year) <= Number(currentYear);
+    });
+    if (!years.length) years = [currentYear];
+
+    var selectedYear = currentYear;
+
+    function applyFilter() {
+      var visibleCount = 0;
+      items.forEach(function (item) {
+        var show = item.getAttribute("data-year") === selectedYear;
+        item.style.display = show ? "" : "none";
+        if (show) visibleCount += 1;
+      });
+      if (emptyNote) emptyNote.hidden = visibleCount > 0;
+      currentYearText.textContent = "Selected year: " + selectedYear;
+    }
+
+    function renderYearButtons() {
+      filterRoot.innerHTML = "";
+      years.forEach(function (year) {
+        var button = document.createElement("button");
+        button.type = "button";
+        button.className = "btn small year-filter-btn" + (year === selectedYear ? " is-active" : "");
+        button.textContent = year;
+        button.addEventListener("click", function () {
+          selectedYear = year;
+          renderYearButtons();
+          applyFilter();
+        });
+        filterRoot.appendChild(button);
+      });
+    }
+
+    toggleBtn.addEventListener("click", function () {
+      filterRoot.hidden = !filterRoot.hidden;
+    });
+
+    renderYearButtons();
+    applyFilter();
+  })();
+</script>
+

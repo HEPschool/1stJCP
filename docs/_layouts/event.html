@@ -79,6 +79,55 @@ layout: default
     </section>
   {% endif %}
 
+  {% if page.participants and page.participants.size > 0 %}
+    <section class="section">
+      <h2>Participants</h2>
+      {% assign participants_with_key = "" | split: "" %}
+
+      {% for p in page.participants %}
+        {% if p.name %}
+          {% assign aff = p.affiliation | default: "" | strip %}
+          {% assign nm  = p.name | strip %}
+          {% if aff == "" %}
+            {% assign aff_key = "~" %}
+          {% else %}
+            {% assign aff_key = aff %}
+          {% endif %}
+          {% capture item %}
+            {{ aff_key | downcase }}|||{{ nm | downcase }}|||{{ nm }}|||{{ aff }}
+          {% endcapture %}
+          {% assign participants_with_key = participants_with_key | push: item %}
+        {% endif %}
+      {% endfor %}
+      {% assign participants_with_key = participants_with_key | sort %}
+      <table>
+        <thead>
+          <tr>
+            <th style="width:40%">Name</th>
+            <th>Affiliation</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in participants_with_key %}
+            {% assign parts = item | split: "|||" %}
+            {%- assign name_display = parts[2] -%}
+            {%- assign aff_display  = parts[3] -%}
+            <tr>
+              <td>{{ name_display }}</td>
+              <td>
+                {% if aff_display and aff_display != "" %}
+                  {{ aff_display }}
+                {% else %}
+                  -
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+  {% endif %}
+
   {% if page.photos and page.photos.size > 0 %}
     <section class="section">
       <h2>Photo</h2>

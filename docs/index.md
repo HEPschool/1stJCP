@@ -5,11 +5,11 @@ title: Home
 hero:
   image: "/assets/img/heros/gargantua.jpg"  # Optional
   lines:
-    - text: "2025. fall ~ 2026. winter"
+    - text: "Since August 22, 2025"
       style: overline
     - text: "COSMIC School:"
       style: subtitle
-    - text: "1st JCP HEP School"
+    - text: "JCP HEP School"
       style: title
     - text: "Jeonbuk, Chungnam and Pusan National University"
       style: note

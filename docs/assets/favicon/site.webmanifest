@@ -1,0 +1,26 @@
+{
+  "name": "1st JCP HEP School",
+  "short_name": "1st JCP",
+  "start_url": "../../",
+  "scope": "../../",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0a84ff",
+  "icons": [
+    {
+      "src": "favicon_16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon_32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon_180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

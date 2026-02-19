@@ -5,7 +5,7 @@ date: 2025-11-08 13:00 +0900
 location: "Chungnam National University, Daejeon, Korea"
 speaker: "Haebarg Kang and Daeyeong Jeong"
 address: "Room 115, College of Natural Sciences Building 4 (W11-2), Chungnam National University, 99 Daehak-ro, Yuseong-gu, Daejeon 34134, Korea"
-note: "Lecture"
+note: "Student Lecture"
 overview: >
   Lecture: Introduction to Dark Matter makes the foundation for understanding dark matter research. <br><br>
 
@@ -49,11 +49,34 @@ timetable:
 map_embed: >
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3212.7521887087823!2d127.3375980119162!3d36.36678097225866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35654b5a03ccdb71%3A0x131d324a82b243ae!2z7J6Q7Jew6rO87ZWZ64yA7ZWZIDTtmLjqtIAoVzExLTIp!5e0!3m2!1sko!2skr!4v1760513072497!5m2!1sko!2skr"
           loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+participants:
+  - name: Hee Beom Yang
+    affiliation: Chungnam National University
+  - name: Chang Hyeon Lee
+    affiliation: Chungnam National University
+  - name: Haebarg Kang
+    affiliation: Jeonbuk National University
+  - name: Daeyeong Jeong
+    affiliation: Chungnam National University
+  - name: Sang Hwan Kim
+    affiliation: Yonsei University
+  - name: Ju Hyeong Kang
+    affiliation: Pusan National University
+  - name: Beom Su Kim
+    affiliation: Jeonbuk National University
+  - name: Gyuri Lee
+    affiliation: Chungnam National University
+  - name: Su Hyeok Hwang
+    affiliation: Chungnam National University
+  - name: Gun Wook Jeong
+    affiliation: Jeonbuk National University
+  - name: Seong-Ha Kim
+    affiliation: Chungnam National University
 photos:
   - "/assets/img/photos/DM_groupphoto.jpg"
   - "/assets/img/photos/DM_discussion.jpg"
 hero:
-  image: "/assets/img/heros/The_Bullet_Cluster.jpg"  # Optional
+  image: "/assets/img/heros/The_Bullet_Cluster.jpg"
   lines:
     - text: "Introduction to Dark Matter"
       style: title

@@ -1,3 +1,7 @@
+- name: "Subscription"
+  topic: "JCP HEP School Newsletter"
+  url: "https://docs.google.com/forms/d/e/1FAIpQLSdPmuhxUEiCufYF1t0lNbipjlweX33ZXaD_78am91TXwnSB_g/viewform?usp=header"
+  enabled: true
 - name: "Registration"
   topic: ""
   url: ""

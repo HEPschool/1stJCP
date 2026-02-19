@@ -56,6 +56,20 @@ a{color:var(--brand)}
 .grid{display:grid;gap:1rem}
 .grid-2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .section{margin:2rem 0}
+.year-filter{display:flex;flex-wrap:wrap;gap:.5rem;margin:.75rem 0 .5rem;align-items:center}
+.year-filter-empty{color:var(--muted);margin:.5rem 0 1rem}
+.year-filter-current{color:var(--muted);font-size:.95rem}
+.year-scroll{
+  display:flex;gap: .6rem;overflow-x:auto;white-space:nowrap;
+  padding:.30rem 0 .6rem;margin-top:0.1rem;margin-bottom:0.1rem
+}
+.year-scroll[hidden]{display:none !important}
+.year-scroll .year-filter-btn.btn.small:not(.is-active){
+  background:#f4f6f8;color:#223;border-color:#e5e8eb;
+}
+.year-scroll .year-filter-btn.is-active{
+  background:var(--brand);border-color:var(--brand);color:#fff;
+}
 
 /* Buttons */
 .buttons{display:flex;flex-wrap:wrap;gap:.75rem;margin:.5rem 0}
@@ -148,5 +162,7 @@ a:focus{outline:2px solid var(--brand); outline-offset:2px}
   .card{border-color:#222;background:#161616}
   .embed{border-color:#222}
   .hero{background:#101318;border-bottom:1px solid #222}
+  .year-scroll .year-filter-btn.btn.small:not(.is-active){background:#161616;color:var(--fg);border-color:#2a3240}
+  .year-scroll .year-filter-btn.is-active{background:var(--brand);border-color:var(--brand);color:#fff}
   a{color:var(--brand)}
 }
