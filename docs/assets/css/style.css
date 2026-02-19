@@ -126,10 +126,25 @@ img.poster{max-width:100%;height:auto;display:block;margin:0 auto;}
 }
 .sponsors-logos img{
   max-height: 8rem;
+  max-width: min(100%, 260px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
   display: block;
 }
 .sponsors-item + .sponsors-item{margin-top: .5rem;}
-.sponsors-logos .sponsors-item{margin-top: 0;}
+.sponsors-logos .sponsors-item{
+  margin-top: 0;
+  max-width: 100%;
+}
+@media (max-width: 720px){
+  .sponsors-logos{gap:.4rem;}
+  .sponsors-logos img{
+    max-height: 4.5rem;
+    max-width: 100%;
+    width: min(100%, 220px);
+  }
+}
 
 /* Special Thanks */
 .specialthanks{
