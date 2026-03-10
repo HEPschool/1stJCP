@@ -1,7 +1,7 @@
 ---
 layout: event
 title: "Introduction of Cosmology and Inflation"
-date: 2026-04-01 09:00 +0900
+date: 2026-04-25 13:00 +0900
 location: "Jeonbuk National University, Jeonju, Korea"
 speaker: "Beom Su Kim"
 address: "TBA"
@@ -23,6 +23,6 @@ hero:
       style: title
     - text: "Beom Su Kim"
       style: subtitle
-    - text: "2026.04.01 (Sat)"
+    - text: "2026.04.25 (Sat)"
       style: text
 ---

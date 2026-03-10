@@ -1,7 +1,7 @@
 ---
 layout: event
 title: "Invited Lecture, TBA"
-date: 2026-06-01 09:00 +0900
+date: 2026-06-01 13:00 +0900
 location: "Chungnam National University, Daejeon, Korea"
 speaker: "Seong-Sik Kim"
 address: "Room 115, College of Natural Sciences Building 4 (W11-2), Chungnam National University, 99 Daehak-ro, Yuseong-gu, Daejeon 34134, Korea"

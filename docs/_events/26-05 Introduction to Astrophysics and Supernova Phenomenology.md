@@ -1,7 +1,7 @@
 ---
 layout: event
 title: "Introduction to Astrophysics and Supernova Phenomenology"
-date: 2026-05-01 09:00 +0900
+date: 2026-05-01 13:00 +0900
 location: "Pusan National University, Busan, Korea"
 speaker: "Ju Hyeong Kang"
 address: "TBA"
